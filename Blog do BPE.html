@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👑 BRASIL PLAY ERA RP/RPG 👑</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #343456);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0000FF, #FF0000);
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 3px;
+            animation: pulse 2s infinite;
+            z-index: 1;
+            position: relative;
+        }
+
+        header h1 span {
+            color: #4169E1;
+        }
+
+        /* Menu hambúrguer */
+        .menu {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        .menu span {
+            display: block;
+            width: 35px;
+            height: 4px;
+            margin: 6px 0;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .menu.open span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .menu.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Menu dropdown */
+        .menu-content {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+
+        .menu-content.open {
+            left: 0;
+        }
+
+        .menu-content a {
+            font-size: 2rem;
+            color: #ffd700;
+            text-decoration: none;
+            margin: 20px 0;
+            transition: color 0.3s;
+        }
+
+        .menu-content a:hover {
+            color: #4169E1;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                text-shadow: 0 0 10px #4169E1, 0 0 20px #ff8800;
+            }
+            50% {
+                text-shadow: 0 0 20px #ffd700, 0 0 30px #ff5500;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .container h2 {
+            font-size: 2.2rem;
+            color: #FFFF00;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 10px;
+        }
+
+        p, ul {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            background: rgba(255, 255, 255, 0.2);
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        button {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(90deg, #0000FF, #FF0000);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            background: #111;
+            padding: 20px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="menu" id="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <h1><span>👑</span> BRASIL PLAY ERA RP/RPG <span>👑</span></h1>
+</header>
+
+<div class="menu-content" id="menuContent">
+    <a href="#sobre">Sobre</a>
+    <a href="#bonus">Bônus</a>
+    <a href="#sorteios">Sorteios</a>
+    <a href="#discord">Discord</a>
+</div>
+
+<script>
+    const menu = document.getElementById('menu');
+    const menuContent = document.getElementById('menuContent');
+
+    menu.addEventListener('click', () => {
+        menu.classList.toggle('open');
+        menuContent.classList.toggle('open');
+    });
+</script>
+
+</body>
+</html>
+
+<div class="container">
+    <h2>🚗💥 Bem-vindo à Nova Era do RP/RPG! 💥🚗</h2>
+    <p>
+        O <span style="color: #ffd700;">BRASIL PLAY ERA</span> é a sua oportunidade de explorar um mundo totalmente personalizado no GTA! Seja no FiveM ou no MTA, trazemos uma experiência única de RP/RPG para a comunidade. Confira o que preparamos:
+    </p>
+    <ul>
+            <h2>ℹ️Informações do sevidorℹ️</h2>
+        
+        <li>🎮 Experiência incrível com servidores personalizados.</li>
+        <li>🎉 Ganhe bônus exclusivos ao entrar agora:</li>
+        <ul style="margin-left: 20px;">
+            <li>🔥 10 dias de sócio VIP</li>
+            <li>💰 5k de cash</li>
+            <li>💵 2kk de dinheiro no jogo</li>
+        </ul>
+        <li>💼 Vagas abertas para Staffs e Helpers.</li>
+        <li>🎁 Sorteios exclusivos com prêmios incríveis!</li>
+    </ul>
+
+    <p>
+        📢 Participe agora no nosso <a href="https://discord.gg/hXbfNmK2" target="_blank">Discord</a> e faça parte da história!
+    </p>
+
+    <h2>🎁 Sorteios Exclusivos!</h2>
+    <ul>
+        <li>💸 Prêmios em dinheiro: R$30,00 + Host TCAdmin.</li>
+        <li>🔗 Links grátis para Spotify, Disney+ e Netflix ao atingirmos 20 membros!</li>
+    </ul>
+
+    <div class="container">
+    <button id="joinDiscord">Entrar no Discord</button>
+</div>
+</div>
+
+
+<footer>
+    <p>© 2025 BRASIL PLAY ERA RP/RPG - Todos os direitos reservados.</p>
+    <p>Criado com 💛 por <a href="#">Sua Comunidade</a>.</p>
+</footer>
+
+<script>
+    document.getElementById('participarBtn').addEventListener('click', function() {
+        alert('🎉 Obrigado por se interessar! Acesse nosso Discord e venha fazer parte do melhor servidor RP/RPG!');
+    });
+</script>
+    
+</head>
+<body>
+
+<script>
+    // Adiciona o evento de clique no botão
+    document.getElementById("joinDiscord").addEventListener("click", function () {
+        window.open("https://discord.gg/hXbfNmK2", "_blank");
+    });
+</script>
+
+</body>
+</html>
