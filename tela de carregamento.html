@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;  /* Centraliza horizontalmente */
+            align-items: flex-start;  /* Alinha ao topo */
+            flex-direction: column;   /* Garante que o conteúdo seja organizado verticalmente */
+            background-color: #f0f0f0;
+            position: relative;
+        }
+        audio {
+            position: absolute;
+            top: 10px;  /* Ajuste esse valor para posicionar mais perto ou mais longe do topo */
+        }
+    </style>
+</head>
+<body>
+    <audio id="audioPlayer" controls>
+        <source src="GTA7.m4a" type="audio/mp3">
+    </audio>
+
+    <script>
+        // Aguarda o primeiro clique na página para disparar a função de reprodução de áudio
+        document.body.addEventListener('click', function() {
+            var audio = document.getElementById('audioPlayer');
+            
+            // Usando setTimeout para adicionar um atraso de 1 segundo
+            setTimeout(function() {
+                audio.play();  // Começa a tocar o áudio após 1 segundo
+            }, 1000);  // 1000 milissegundos = 1 segundo
+        });
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Carregamento</title>
+    <style>
+        /* Estilo geral */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            color: white;
+        }
+
+        /* Container da tela de carregamento */
+        .loading-container {
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Animação inicial */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Logo estilizado */
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px rgba(139, 92, 246, 0.9);
+            margin-bottom: 20px;
+        }
+
+        /* Barra de progresso */
+        .progress-bar {
+            position: relative;
+            width: 80%;
+            height: 20px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .progress-bar-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            transition: width 0.3s ease;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.8), 0 0 10px rgba(59, 130, 246, 0.6);
+        }
+
+        /* Texto animado */
+        .loading-text {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.9);
+            animation: pulse 2s infinite;
+        }
+
+        /* Animação de pulsar no texto */
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        /* Rodapé (opcional) */
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="logo">BRASIL PLAY ERA</div>
+        <div class="progress-bar">
+            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+        </div>
+        <div class="loading-text">Carregando... Por favor, aguarde.</div>
+    </div>
+    <div class="footer">© 2025 BRASIL PLAY ERA. Todos os direitos reservados.</div>
+
+    <script>
+        const progressBarFill = document.getElementById('progress-bar-fill');
+        let progress = 0;
+
+        function simulateLoading() {
+            if (progress < 100) {
+                progress += Math.random() * 4; // Incremento aleatório
+                progressBarFill.style.width = `${progress}%`;
+                setTimeout(simulateLoading, 100);
+            } else {
+             
+
+                // Redirecionar para BPE.HTML após 3 segundos
+                setTimeout(() => {
+                    window.location.href = 'BPE.HTML';
+                }, 3000); // 2000 milissegundos = 3 segundos
+            }
+        }
+
+        simulateLoading();
+    </script>
+</body>
+</html>
+    
+    
+    
+    
+    
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('gtaSAMP2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
+
+    
+    
